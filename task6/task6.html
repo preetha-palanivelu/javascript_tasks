@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="ageCalc">Calculate</button>
+
+    <script>
+      var birthYear = "1998";
+      var currentYear = "2025";
+      var birthMonth = "6";
+      var currentMonth = new Date().getMonth() + 1; // months are 0–11
+
+      var totalYear = currentYear - birthYear;
+
+      var totalMonth = currentMonth - birthMonth;
+
+      const btn = document.getElementById("ageCalc");
+      btn.addEventListener("click", function () {
+        alert(`You are ${totalYear} years and ${totalMonth} months old`);
+      });
+    </script>
+  </body>
+</html>
